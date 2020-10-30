@@ -15,7 +15,7 @@ count = 0
 
 while True:
     success, img = cap.read()
-    imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    imgGray = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
     numberPlates = nPlateCascade.detectMultiScale(imgGray, 1.1, 10)
     for (x, y, w, h) in numberPlates:
         area = w*h
